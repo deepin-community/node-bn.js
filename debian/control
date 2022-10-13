@@ -1,0 +1,32 @@
+Source: node-bn.js
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Siddhesh Rane <kingsid911@gmail.com>,
+           Bastien Roucariès <rouca@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , nodejs:native <!nocheck>
+ , mocha <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-bn.js
+Vcs-Git: https://salsa.debian.org/js-team/node-bn.js.git
+Homepage: https://github.com/indutny/bn.js
+Rules-Requires-Root: no
+
+Package: node-bn.js
+Architecture: all
+Depends:
+ ${misc:Depends}
+Multi-Arch: foreign
+Description: Big number implementation in pure javascript
+ This package handles arithmetic of big numbers (integers)
+ provided through strings.
+ .
+ It can convert the big number to native javascript numbers.
+ .
+ Floating point number are not supported.
+ .
+ Node.js is an event-based server-side JavaScript engine.
